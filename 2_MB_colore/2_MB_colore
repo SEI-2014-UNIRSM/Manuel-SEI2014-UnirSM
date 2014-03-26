@@ -1,0 +1,39 @@
+
+void setup() {
+  size(800, 800);
+
+  frameRate(2);
+
+  ellipseMode(CENTER);
+  smooth();
+}
+void draw() {
+
+  background(255, 244, 219);
+
+  for (int r =300;r>0;r=r-6) {
+    strokeWeight(2);
+
+
+    int x=800-r;
+    int y=800-r;
+
+
+    fill(random (200), random (200), random (200));
+    stroke(random (255), random (255), random (255), random(255));
+    ellipse(r, r, mouseX+r, mouseY+r); //  angolo alto sinistra
+    ellipse(x, r, mouseX+r, mouseY+r);  //  angolo alto destra
+    stroke(random (255), random (255), random (255), random(255));
+    ellipse(r, y, mouseX+r, mouseY+r); //  angolo basso sinistra
+    stroke(random (255), random (255), random (255), random(255));
+    ellipse(x, y, mouseX+r, mouseY+r); //  angolo basso destra
+    stroke(random (255), random (255), random (255), random(255));
+    // ellipse(width/2, r, mouseX+r, mouseY+r); //centro dall'alto
+    stroke(random (255), random (255), random (255), random(255));
+    // ellipse(r, height/2, mouseX+r, mouseY+r); //centro da destra
+    stroke(random (255), random (255), random (255), random(255));
+    // ellipse(x, height/2, mouseX+r, mouseY+r); // centro da sinistra
+    stroke(random (255), random (255), random (255), random(255));
+    //  ellipse(width/2, y, mouseX+r, mouseY+r); //centro da sotto
+  }
+}
